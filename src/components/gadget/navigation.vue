@@ -1,15 +1,41 @@
 <template>
     <div class='ribbon'>
-        <a href='#'><span>Home</span></a>
-        <a href='#'><span>About</span></a>
-        <a href='#'><span>Services</span></a>
-        <a href='#'><span>Contact</span></a>
+        <a href='#' @click="displayArticle">
+            <span>
+                <el-dropdown>
+                    <label class="el-dropdown-link">
+                        Article<i class="el-icon-arrow-down el-icon--right"></i>
+                    </label>
+                    <el-dropdown-menu slot="dropdown">
+                        <newarticle></newarticle>
+                    </el-dropdown-menu>
+                </el-dropdown>
+            </span>
+        </a>
+        <a href='#' @click="displayOther"><span>About</span></a>
+        <a href='#' @click="displayOther"><span>Services</span></a>
+        <a href='#' @click="displayOther"><span>Contact</span></a>
     </div>
 </template>
 
 <script>
+    import newarticle from '../form/newarticle'
     export default {
-        name: 'navigation'
+        name: 'navigation',
+        components: {
+            newarticle
+        },
+        methods: {
+            displayArticle: function () {
+                this.$router.push('Article')
+            },
+            displayOther: function () {
+                this.$router.push('Empty')
+            },
+            handleClick() {
+                alert('button click');
+            }
+        }
     }
 </script>
 
@@ -85,4 +111,12 @@
     border-left: 0.5em solid #9B8651;
     border-bottom: 0.5em solid #fff;
 }
+
+.el-dropdown-link {
+    cursor: pointer;
+    color: #409EFF;
+  }
+  .el-icon-arrow-down {
+    font-size: 12px;
+  }
 </style>

@@ -70,6 +70,7 @@
         },
         methods: {
             signin: function () {
+                this.$router.push('Main')
                 console.log(this.$store.getters.getNumber)
                 console.log(process.env.VUE_APP_BASE_URL)
                 console.log(this.username)
