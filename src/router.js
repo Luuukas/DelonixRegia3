@@ -5,6 +5,10 @@ import Main from './components/Main'
 import Entry from './components/Entry'
 import Empty from './components/Empty'
 import Article from './components/Article'
+<<<<<<< HEAD
+import CrowdFundingForm from './components/CrowdFundingForm'
+=======
+>>>>>>> 0764bd6b4dc52f28a1665bb48877d82ecc2f7faa
 
 Vue.use(Router)
 
@@ -28,6 +32,14 @@ export default new Router({
                     path: '/Article',
                     name: 'Article',
                     component: Article
+<<<<<<< HEAD
+                },
+                {
+                    path: '/CrowdFundingForm',
+                    name: CrowdFundingForm,
+                    component: CrowdFundingForm
+=======
+>>>>>>> 0764bd6b4dc52f28a1665bb48877d82ecc2f7faa
                 }
             ]
         },

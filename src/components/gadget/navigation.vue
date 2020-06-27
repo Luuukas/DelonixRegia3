@@ -13,7 +13,11 @@
             </span>
         </a>
         <a href='#' @click="displayOther"><span>About</span></a>
+<<<<<<< HEAD
+        <a href='#' @click="displayService"><span>Services</span></a>
+=======
         <a href='#' @click="displayOther"><span>Services</span></a>
+>>>>>>> 0764bd6b4dc52f28a1665bb48877d82ecc2f7faa
         <a href='#' @click="displayOther"><span>Contact</span></a>
     </div>
 </template>
@@ -29,6 +33,12 @@
             displayArticle: function () {
                 this.$router.push('Article')
             },
+<<<<<<< HEAD
+            displayService: function () {
+                this.$router.push('CrowdFundingForm')
+            },
+=======
+>>>>>>> 0764bd6b4dc52f28a1665bb48877d82ecc2f7faa
             displayOther: function () {
                 this.$router.push('Empty')
             },
